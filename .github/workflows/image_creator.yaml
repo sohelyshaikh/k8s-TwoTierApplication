@@ -26,11 +26,7 @@ jobs:
     - name: Build the Docker image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-<<<<<<< HEAD
         ECR_REPOSITORY: k8s_ecr_repo
-=======
-        ECR_REPOSITORY: k8s-clo835-ecr-sohel
->>>>>>> bc1f598645525bb0b17ec3a81746bb999c994b60
         IMAGE_TAG: mongodb
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
