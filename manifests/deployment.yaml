@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: guestbook
+spec:
+  selector:
+    matchLabels:
+      app: mongodb 
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mongodb
+    spec:
+      containers:
+      - name: mongodb
+        image: 811653861373.dkr.ecr.us-east-1.amazonaws.com/k8s_ecr_repo:mongodb
+        ports:
+        - containerPort:  80
+          protocol: TCP
+

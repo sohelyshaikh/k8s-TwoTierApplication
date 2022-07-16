@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name:  lb-service
+spec:
+  selector:
+    app: fortune
+  type: LoadBalancer 
+  ports:
+  -  port:  80
+     targetPort: 80
+     protocol: TCP
