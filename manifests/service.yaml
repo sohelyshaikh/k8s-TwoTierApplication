@@ -1,10 +1,11 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name:  lb-service
+  name:  frontend-lb
 spec:
   selector:
-    app: fortune
+    name: guestbook
+    component: frontend
   type: LoadBalancer 
   ports:
   -  port:  80
