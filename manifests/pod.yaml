@@ -5,17 +5,9 @@ metadata:
   labels:
     app: mongodb
 spec:
-  # volumes:
-  # - name: mongodb-data
-  #   awsElasticBlockStore:
-  #     volumeID: vol-02f90e420c5ed2c92
-  #     fsType: ext4
   containers:
   - image: 811653861373.dkr.ecr.us-east-1.amazonaws.com/k8s_ecr_repo:mongodb
     name: mongodb
-    # volumeMounts:
-    # - name: mongodb-data
-    #   mountPath: /data/db
     ports:
-    - containerPort: 27017
+    - containerPort: 80
       protocol: TCP
