@@ -30,9 +30,14 @@ spec:
         ports:
         - containerPort: 27017
         volumeMounts:
-        - name: mongo-dynamic-volume
+        - name: mongo-hostpath
           mountPath: /data/db
+        # - name: mongo-dynamic-volume
+        #   mountPath: /data/db
       volumes:
-      - name: mongo-dynamic-volume
+      - name: mongo-hostpath
         persistentVolumeClaim:
-          claimName: mongo-claim
+          claimName: mongo-hostpath
+      # - name: mongo-dynamic-volume
+      #   persistentVolumeClaim:
+      #     claimName: mongo-claim
