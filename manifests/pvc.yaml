@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: claim
+  name: mongo-claim
   labels:
-    app: claim
+    app: mongo-claim
 spec:
   storageClassName: standard
   accessModes:
