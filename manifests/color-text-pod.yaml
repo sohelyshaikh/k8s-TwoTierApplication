@@ -9,17 +9,7 @@ spec:
   - name: colour
     image: mmumshad/simple-webapp-color
     env:
-    # - name: APP_COLOR
-    #   value: green
-      # - name: APP_COLOR
-      #   valueFrom:
-      #     configMapKeyRef:
-      #       name: colour-configmap
-      #       key: APP_COLOR
-      - name: APP_COLOR
-        valueFrom:
-          secretKeyRef:
-            name: colour-secret
-            key: APP_COLOR
+    - name: APP_COLOR
+      value: green
     ports:
       - containerPort: 8080
